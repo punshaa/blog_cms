@@ -1,0 +1,419 @@
+/* Reset básico para todos los elementos */
+* {
+    margin: 0;          /* Elimina todos los márgenes por defecto */
+    padding: 0;         /* Elimina todo el padding por defecto */
+    box-sizing: border-box;  /* Hace que el padding y border se incluyan en el ancho/alto */
+}
+
+/* Estilos generales del body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Fuente moderna y legible */
+    line-height: 1.6;   /* Espaciado entre líneas para mejor legibilidad */
+    color: #2c3e50;     /* Color de texto principal */
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);  /* Fondo con gradiente suave */
+    min-height: 100vh;  /* Asegura que el body ocupe al menos toda la altura de la ventana */
+    padding: 2rem;      /* Espacio alrededor del contenido */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cmVjdCB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBmaWxsPSIjZTdmOGU5Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0yOCA2NkwwIDUwTDAgMTZMMjggMEw1NiAxNkw1NiA1MEwyOCA2NkwyOCAxMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Q3ZWNkZiIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+CjxwYXRoIGQ9Ik0yOCAwTDI4IDM0TDAgNTBMMCA4NEwyOCAxMDBMNTYgODRMNTYgNTBMMjggMzQiIGZpbGw9IiNlM2YyZTYiPjwvcGF0aD4KPC9zdmc+');  /* Patrón de fondo sutil */
+}
+
+/* Estilos para el título principal */
+h1 {
+    text-align: center;     /* Centra el texto */
+    color: #1b5e20;        /* Verde oscuro para el título */
+    font-size: 3rem;       /* Tamaño grande para el título */
+    margin-bottom: 2rem;   /* Espacio debajo del título */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);  /* Sombra sutil para dar profundidad */
+    position: relative;     /* Necesario para el pseudo-elemento */
+    padding-bottom: 1rem;  /* Espacio para la línea decorativa */
+    font-family: 'Georgia', serif;  /* Fuente serif para títulos */
+}
+
+/* Línea decorativa bajo el título principal */
+h1::after {
+    content: '';           /* Crea un elemento vacío */
+    position: absolute;    /* Posiciona respecto al título */
+    bottom: 0;            /* Lo coloca en la parte inferior */
+    left: 50%;            /* Centra horizontalmente */
+    transform: translateX(-50%);  /* Ajusta el centrado */
+    width: 100px;         /* Ancho de la línea */
+    height: 3px;          /* Altura de la línea */
+    background: linear-gradient(to right, #2e7d32, #43a047);  /* Gradiente en la línea */
+    border-radius: 2px;   /* Bordes redondeados */
+}
+
+/* Estilos para el título de la página */
+.page-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1b5e20;
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #2e7d32, #43a047);
+    border-radius: 2px;
+}
+
+/* Contenedor para centrar el botón de crear post */
+.create-post-container {
+    display: flex;         /* Usa flexbox para centrado */
+    justify-content: center;  /* Centra horizontalmente */
+    margin-bottom: 2rem;   /* Espacio debajo del contenedor */
+}
+
+/* Estilos para los enlaces */
+a {
+    display: inline-block;  /* Permite padding y margin */
+    background: #2e7d32;    /* Fondo verde */
+    color: white;          /* Texto blanco */
+    text-decoration: none; /* Quita el subrayado */
+    padding: 0.8rem 1.5rem;  /* Espacio interno */
+    border-radius: 25px;   /* Bordes muy redondeados */
+    transition: all 0.3s ease;  /* Transición suave */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);  /* Sombra sutil */
+}
+
+/* Efecto hover para los enlaces */
+a:hover {
+    background: #1b5e20;   /* Verde más oscuro al pasar el mouse */
+    transform: translateY(-2px);  /* Se eleva ligeramente */
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);  /* Sombra más pronunciada */
+}
+
+/* Estilos para los títulos de los posts */
+h2 {
+    color: #1b5e20;       /* Verde oscuro */
+    margin-bottom: 1.5rem;  /* Espacio debajo */
+    font-size: 2rem;      /* Tamaño de fuente */
+    text-align: center;   /* Centrado */
+    position: relative;   /* Para la línea decorativa */
+    padding-bottom: 0.5rem;  /* Espacio para la línea */
+    font-family: 'Georgia', serif;  /* Fuente serif */
+}
+
+/* Línea decorativa bajo los títulos de los posts */
+h2::after {
+    content: '';          /* Elemento vacío */
+    position: absolute;   /* Posicionamiento */
+    bottom: 0;           /* En la parte inferior */
+    left: 50%;           /* Centrado */
+    transform: translateX(-50%);  /* Ajuste del centrado */
+    width: 60px;         /* Ancho más pequeño que el h1 */
+    height: 2px;         /* Línea más delgada */
+    background: #43a047; /* Verde más claro */
+    border-radius: 2px;  /* Bordes redondeados */
+}
+
+/* Estilos para el contenido de los posts */
+p {
+    color: #2e7d32;      /* Verde medio */
+    margin-bottom: 1.5rem;  /* Espacio debajo */
+    line-height: 1.8;    /* Espaciado entre líneas */
+    text-align: justify; /* Texto justificado */
+    padding: 0 1rem;     /* Espacio a los lados */
+    font-size: 1.1rem;   /* Tamaño de fuente */
+}
+
+/* Estilos para la fecha de publicación */
+small {
+    display: block;      /* Ocupa toda la línea */
+    color: #558b2f;      /* Verde más claro */
+    margin-bottom: 1rem; /* Espacio debajo */
+    font-size: 0.9rem;   /* Texto más pequeño */
+    text-align: center;  /* Centrado */
+    font-style: italic;  /* Cursiva */
+}
+
+/* Estilos para los formularios */
+form {
+    margin: 1rem 0;      /* Espacio arriba y abajo */
+    text-align: center;  /* Centrado */
+}
+
+/* Estilos para los botones */
+button {
+    background: #43a047;  /* Verde medio */
+    color: white;        /* Texto blanco */
+    border: none;        /* Sin borde */
+    padding: 0.6rem 1.2rem;  /* Espacio interno */
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer;     /* Mano al pasar el mouse */
+    transition: all 0.3s ease;  /* Transición suave */
+    font-size: 0.9rem;   /* Tamaño de fuente */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Sombra sutil */
+}
+
+/* Efecto hover para los botones */
+button:hover {
+    background: #2e7d32;  /* Verde más oscuro */
+    transform: translateY(-2px);  /* Se eleva */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);  /* Sombra más pronunciada */
+}
+
+/* Estilos para las líneas divisorias */
+hr {
+    border: none;        /* Quita el borde por defecto */
+    height: 1px;         /* Altura de la línea */
+    background: linear-gradient(to right, transparent, #81c784, transparent);  /* Gradiente */
+    margin: 2rem 0;      /* Espacio arriba y abajo */
+}
+
+/* Contenedor principal de la página */
+.container {
+    max-width: 800px;    /* Ancho máximo */
+    margin: 0 auto;      /* Centrado horizontal */
+    background: rgba(255, 255, 255, 0.95);  /* Fondo blanco semi-transparente */
+    padding: 2rem;       /* Espacio interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);  /* Sombra pronunciada */
+    border: 1px solid #c8e6c9;  /* Borde verde claro */
+}
+
+/* Estilos para cada post individual */
+.post {
+    background: white;   /* Fondo blanco */
+    padding: 2rem;       /* Espacio interno */
+    margin-bottom: 2rem; /* Espacio entre posts */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);  /* Sombra sutil */
+    transition: transform 0.3s ease;  /* Transición suave */
+    text-align: center;  /* Contenido centrado */
+    border: 1px solid #e8f5e9;  /* Borde verde muy claro */
+    position: relative;  /* Para el icono decorativo */
+    overflow: hidden;    /* Contiene el icono */
+}
+
+/* Icono decorativo de hoja en cada post */
+.post::before {
+    content: '🌿';       /* Emoji de hoja */
+    position: absolute;  /* Posicionamiento absoluto */
+    top: 10px;          /* Distancia desde arriba */
+    right: 10px;        /* Distancia desde la derecha */
+    font-size: 1.5rem;  /* Tamaño del icono */
+    opacity: 0.2;       /* Semi-transparente */
+}
+
+/* Efecto hover para los posts */
+.post:hover {
+    transform: translateY(-3px);  /* Se eleva */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);  /* Sombra más pronunciada */
+    border-color: #81c784;  /* Borde más visible */
+}
+
+/* Estilos para el formulario de creación de posts */
+.form-group {
+    margin-bottom: 1.5rem;  /* Espacio entre grupos */
+    text-align: left;      /* Alineación a la izquierda */
+}
+
+/* Estilos para las etiquetas del formulario */
+.form-group label {
+    display: block;        /* Ocupa toda la línea */
+    margin-bottom: 0.5rem; /* Espacio debajo */
+    color: #1b5e20;       /* Verde oscuro */
+    font-weight: bold;    /* Texto en negrita */
+}
+
+/* Estilos para los campos de entrada del formulario */
+.form-group input,
+.form-group textarea {
+    width: 100%;          /* Ancho completo */
+    padding: 0.8rem;      /* Espacio interno */
+    border: 1px solid #c8e6c9;  /* Borde verde claro */
+    border-radius: 8px;   /* Bordes redondeados */
+    font-size: 1rem;      /* Tamaño de fuente */
+    transition: all 0.3s ease;  /* Transición suave */
+}
+
+/* Efecto focus para los campos del formulario */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;        /* Quita el outline por defecto */
+    border-color: #43a047;  /* Borde verde al enfocar */
+    box-shadow: 0 0 0 2px rgba(67, 160, 71, 0.2);  /* Sombra verde suave */
+}
+
+/* Estilos específicos para el área de texto */
+.form-group textarea {
+    min-height: 200px;    /* Altura mínima */
+    resize: vertical;     /* Solo permite redimensionar verticalmente */
+}
+
+/* Estilos para los botones de acción */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Estilos para el botón de ver posts */
+.btn-view-posts {
+    background: #81c784;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-view-posts:hover {
+    background: #66bb6a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+.post-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el encabezado de la página */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e8f5e9;
+}
+
+/* Estilos para el formulario de creación de posts */
+.create-post-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Estilos para los campos del formulario */
+.form-control {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e8f5e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.form-control:focus {
+    border-color: #43a047;
+    box-shadow: 0 0 0 3px rgba(67, 160, 71, 0.2);
+    outline: none;
+}
+
+/* Estilos para el área de texto */
+textarea.form-control {
+    min-height: 200px;
+    resize: vertical;
+}
+
+/* Estilos para el contenedor de subida de archivos */
+.file-upload-container {
+    position: relative;
+    margin: 1rem 0;
+}
+
+/* Ocultar el input file original */
+.file-upload {
+    position: absolute;
+    left: -9999px;
+}
+
+/* Estilos para el label personalizado del input file */
+.file-upload-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background: #e8f5e9;
+    border: 2px dashed #43a047;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-upload-label:hover {
+    background: #c8e6c9;
+    border-color: #2e7d32;
+}
+
+/* Estilos para el icono de subida */
+.upload-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+/* Estilos para el texto de información del archivo */
+.file-info {
+    display: block;
+    margin-top: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Estilos para los botones de acción */
+.btn-primary {
+    background: #43a047;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover {
+    background: #2e7d32;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+.btn-secondary {
+    background: #81c784;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-secondary:hover {
+    background: #66bb6a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+/* Estilos para las imágenes de los posts */
+.post-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}

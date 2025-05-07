@@ -1,0 +1,5 @@
+Ocupe chatgpt para guiarme en la conexion de phpmyadmin ya que era la primera ves que ocupaba este formato me hizo un paso a paso 
+y ahi fui integrandome , despues empece con un formulario basico para crear post sin estilos sin nada 
+me asegure que funcionara primero y despues ya le pedi consejos de como hacer que el diseño se viera mas atractivo 
+de ahi fui jugando y cambiando cosas a mi gusto hasta que llegue al resultado final, tuve problemas con uno de los botones y 
+ahi ya pedi ayuda para que me guiara y cambiarlo hasta que funcione y se vea bien 

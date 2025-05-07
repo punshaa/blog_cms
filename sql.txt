@@ -1,0 +1,13 @@
+CREATE DATABASE blog_cms;
+
+USE blog_cms;
+
+CREATE TABLE posts (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    title VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+    content TEXT COLLATE utf8mb4_general_ci NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    image_path VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
